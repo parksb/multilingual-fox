@@ -1,0 +1,21 @@
+{
+  "name": "dictionary-for-firefox",
+  "version": "1.0.0",
+  "description": "A simple dictionary addon for firefox",
+  "main": "dst/index.js",
+  "scripts": {
+    "start": "parcel index.ts --open",
+    "build": "parcel build index.ts"
+  },
+  "author": "ParkSB",
+  "license": "MPL2.0",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.12",
+    "@types/request": "^2.48.2",
+    "typescript": "^3.5.3"
+  }
+}

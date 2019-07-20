@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Dictionary for Firefox",
+  "version": "0.1",
+  "description": "A simple dictionary addon for firefox",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "permissions": [
+    "storage",
+    "webRequest",
+    "*://localhost/*",
+    "*://m.endic.naver.com/*",
+    "*://endic.naver.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/index.js"]
+    }
+  ]
+}
