@@ -10,8 +10,8 @@ class Tooltip {
 
     Utils.set([this.dom])
       .style('position', 'fixed')
-      .style('top', '1px')
-      .style('left', '1px')
+      .style('top', '5px')
+      .style('right', '5px')
       .style('display', 'block')
       .style('width', 'auto')
       .style('height', 'auto')
