@@ -1,4 +1,4 @@
-import Content from './models/Content';
+import { Content } from './models';
 import Utils from './Utils';
 
 class Tooltip {
@@ -68,8 +68,8 @@ class Tooltip {
 
     Utils.appendHTML(this.dom, titleDOM, `${content.title} ${content.pronounce}`);
     Utils.appendHTML(this.dom, descriptionDOM, `${content.part} ${content.description}`);
-    Utils.appendText(this.dom, exampleDOM, content.example);
-    Utils.appendText(this.dom, exampleMeaningDOM, content.exampleMeaning);
+    Utils.appendText(this.dom, exampleDOM, content.example.sentence);
+    Utils.appendText(this.dom, exampleMeaningDOM, content.example.meaning);
 
     this.dom.appendChild(seperatorDOM);
   }

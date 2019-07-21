@@ -1,12 +1,12 @@
-interface Content {
+interface Selector {
   title: string;
-  part?: string;
   pronounce?: string;
-  description?: string;
+  part?: string;
+  description?: string[];
   example?: {
     sentence: string;
     meaning: string;
   };
 }
 
-export { Content };
+export { Selector };

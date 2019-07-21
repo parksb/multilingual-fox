@@ -3,6 +3,7 @@ import cheerio from 'cheerio';
 
 import Tooltip from '../Tooltip';
 import Scraper from './Scraper';
+import { Selector } from '../models';
 
 class ZhNaver extends Scraper {
   static baseUrl: string = 'https://zh.dict.naver.com/mini/search/all?q=';
@@ -16,17 +17,19 @@ class ZhNaver extends Scraper {
       const baseSelector: string = '.word_result > dl';
 
       do {
-        const titleSelector = `dt:nth-child(${index}) > a`;
-        const pronounceSelector = `dt:nth-child(${index}) > span.py`;
-        const descriptionSelector = `dt:nth-child(${index}) + dd > ol`;
+        const selector: Selector = {
+          title: `dt:nth-child(${index}) > a`,
+          pronounce: `dt:nth-child(${index}) > span.py`,
+          description: [`dt:nth-child(${index}) + dd > ol`],
+        };
 
-        this.content.title = $(`${baseSelector} > ${titleSelector}`).html();
+        this.content.title = $(`${baseSelector} > ${selector.title}`).html();
         if (!this.content.title) {
           break;
         }
 
-        this.content.pronounce = $(`${baseSelector} > ${pronounceSelector}`).text();
-        this.content.description = $(`${baseSelector} > ${descriptionSelector}`).text();
+        this.content.pronounce = $(`${baseSelector} > ${selector.pronounce}`).text();
+        this.content.description = $(`${baseSelector} > ${selector.description[0]}`).text();
 
         Tooltip.addContentDOM(this.content);
 

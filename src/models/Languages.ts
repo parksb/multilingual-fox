@@ -4,4 +4,4 @@ enum Languages {
   Undefined,
 }
 
-export default Languages;
+export  { Languages };
