@@ -1,5 +1,5 @@
 
-import Content from './Content';
+import Content from '../models/Content';
 
 class Scraper {
   static baseUrl: string;

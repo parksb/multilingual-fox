@@ -2,7 +2,7 @@ import request from 'request';
 import cheerio from 'cheerio';
 
 import Tooltip from '../Tooltip';
-import Scraper from '../Scraper';
+import Scraper from './Scraper';
 
 class ZhNaver extends Scraper {
   static baseUrl: string = 'https://zh.dict.naver.com/mini/search/all?q=';

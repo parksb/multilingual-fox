@@ -1,5 +1,5 @@
 import { EngNaver, ZhNaver } from './scrapers';
-import Languages from './Languages';
+import Languages from './models/Languages';
 
 class Dictionary {
   private static detectLanguage(word: string) {
