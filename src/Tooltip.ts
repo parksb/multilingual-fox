@@ -39,8 +39,6 @@ class Tooltip {
 
   public static addContentDOM(content: Content) {
     const titleDOM = document.createElement('h1');
-    const pronounceDOM = document.createElement('span');
-    const partDOM = document.createElement('span');
     const descriptionDOM = document.createElement('p');
     const exampleDOM = document.createElement('p');
     const exampleMeaningDOM = document.createElement('p');
@@ -48,15 +46,11 @@ class Tooltip {
 
     Utils.set([titleDOM])
       .style('font-size', '14px')
+      .style('font-weight', 'normal')
       .style('margin-top', '3px')
       .style('margin-bottom', '3px');
-    Utils.set([pronounceDOM])
-      .style('font-weight', 'normal')
-      .style('margin-left', '3px');
     Utils.set([
       descriptionDOM,
-      pronounceDOM,
-      partDOM,
       exampleDOM,
       exampleMeaningDOM,
     ]).style('font-size', '12px')
@@ -65,19 +59,14 @@ class Tooltip {
     Utils.set([exampleDOM, exampleMeaningDOM])
       .style('font-style', 'italic')
       .style('color', '#777777');
-    Utils.set([partDOM])
-      .style('background-color', '#dfdfdf')
-      .style('margin-right', '3px');
     Utils.set([seperatorDOM])
       .style('margin-top', '10px')
       .style('margin-bottom', '10px');
 
-    Utils.appendHTML(this.dom, titleDOM, content.title);
-    Utils.appendText(this.dom, descriptionDOM, content.description);
+    Utils.appendHTML(this.dom, titleDOM, `${content.title} ${content.pronounce}`);
+    Utils.appendHTML(this.dom, descriptionDOM, `${content.part} ${content.description}`);
     Utils.appendText(this.dom, exampleDOM, content.example);
     Utils.appendText(this.dom, exampleMeaningDOM, content.exampleMeaning);
-    Utils.appendText(titleDOM, pronounceDOM, content.pronounce);
-    Utils.prependText(descriptionDOM, partDOM, content.part);
 
     this.dom.appendChild(seperatorDOM);
   }
