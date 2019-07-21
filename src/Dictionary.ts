@@ -31,6 +31,8 @@ class Dictionary {
       default:
         break;
     }
+
+    return language;
   }
 }
 
