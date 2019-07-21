@@ -1,4 +1,4 @@
-import Content from './Content';
+import Content from './models/Content';
 import Utils from './Utils';
 
 class Tooltip {

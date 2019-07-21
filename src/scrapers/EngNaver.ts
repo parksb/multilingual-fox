@@ -2,7 +2,7 @@ import request from 'request';
 import cheerio from 'cheerio';
 
 import Tooltip from '../Tooltip';
-import Scraper from '../Scraper';
+import Scraper from './Scraper';
 
 class EngNaver extends Scraper {
   static baseUrl: string = 'https://endic.naver.com/popManager.nhn?sLn=kr&m=search&query=';
