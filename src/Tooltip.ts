@@ -15,6 +15,7 @@ class Tooltip {
       .style('display', 'block')
       .style('width', 'auto')
       .style('height', 'auto')
+      .style('line-height', '15px')
       .style('z-index', '99999')
       .style('background-color', '#ffffff')
       .style('border', '1px #000000 solid')
@@ -48,14 +49,16 @@ class Tooltip {
       .style('font-size', '14px')
       .style('font-weight', 'normal')
       .style('margin-top', '3px')
-      .style('margin-bottom', '3px');
+      .style('margin-bottom', '3px')
+      .style('color', '#000000');
     Utils.set([
       descriptionDOM,
       exampleDOM,
       exampleMeaningDOM,
     ]).style('font-size', '12px')
       .style('margin-top', '3px')
-      .style('margin-bottom', '3px');
+      .style('margin-bottom', '3px')
+      .style('color', '#000000');
     Utils.set([exampleDOM, exampleMeaningDOM])
       .style('font-style', 'italic')
       .style('color', '#777777');
