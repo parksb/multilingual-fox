@@ -1,8 +1,8 @@
 {
-  "name": "dictionary-for-firefox",
+  "name": "multilingual-fox",
   "version": "0.1.0",
   "description": "A simple dictionary extension for firefox",
-  "main": "dst/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "./node_modules/web-ext/bin/web-ext run",
     "build": "./node_modules/web-ext/bin/web-ext build --overwrite-dest",

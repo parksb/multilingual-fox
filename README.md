@@ -1,4 +1,4 @@
-# Dictionary for Firefox
+# Multilingual Fox
 
 ![Preview](https://user-images.githubusercontent.com/6410412/61590282-982c0300-abf1-11e9-9845-04e6bd174230.gif)
 
@@ -6,7 +6,7 @@ A simple dictionary extension supporting English-Korean and Chinese-Korean for f
 
 ## Installing
 
-Firefox Add-ons: https://addons.mozilla.org/firefox/addon/dictionary-for-firefox/
+Firefox Add-ons: https://addons.mozilla.org/firefox/addon/multilingual-fox/
 
 ## License
 
