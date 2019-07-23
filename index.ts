@@ -7,7 +7,7 @@ document.addEventListener('mouseup', (e) => {
     Tooltip.hide();
   }
 
-  if (e.altKey) {
+  if (!Tooltip.getIsOpen() && e.altKey)  {
     const word = document.getSelection().toString().trim();
     if (word.length > 0 && word.length < 40) {
       if (Dictionary.load(word) !== Languages.Undefined) {
