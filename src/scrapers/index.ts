@@ -1,2 +1,2 @@
-export * from './EngNaver';
-export * from './ZhNaver';
+export * from './EndicNaver';
+export * from './ZhDictNaver';

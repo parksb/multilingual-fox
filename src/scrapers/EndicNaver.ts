@@ -5,7 +5,7 @@ import Tooltip from '../Tooltip';
 import Scraper from './Scraper';
 import { Selector } from '../models';
 
-class EngNaver extends Scraper {
+class EndicNaver extends Scraper {
   static baseUrl: string = 'https://endic.naver.com/popManager.nhn?sLn=kr&m=search&query=';
 
   static load(word: string) {
@@ -57,4 +57,4 @@ class EngNaver extends Scraper {
   }
 }
 
-export { EngNaver };
+export { EndicNaver };

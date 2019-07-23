@@ -5,7 +5,7 @@ import Tooltip from '../Tooltip';
 import Scraper from './Scraper';
 import { Selector } from '../models';
 
-class ZhNaver extends Scraper {
+class ZhDictNaver extends Scraper {
   static baseUrl: string = 'https://zh.dict.naver.com/mini/search/all?q=';
 
   static load(word: string) {
@@ -39,4 +39,4 @@ class ZhNaver extends Scraper {
   }
 }
 
-export { ZhNaver };
+export { ZhDictNaver };

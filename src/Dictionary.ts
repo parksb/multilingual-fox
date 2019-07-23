@@ -1,4 +1,4 @@
-import { EngNaver, ZhNaver } from './scrapers';
+import { EndicNaver, ZhDictNaver } from './scrapers';
 import { Languages } from './models';
 
 class Dictionary {
@@ -23,10 +23,10 @@ class Dictionary {
 
     switch (language) {
       case Languages.English:
-        EngNaver.load(word);
+        EndicNaver.load(word);
         break;
       case Languages.Chinese:
-        ZhNaver.load(word);
+        ZhDictNaver.load(word);
         break;
       default:
         break;
