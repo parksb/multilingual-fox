@@ -50,7 +50,8 @@ class Tooltip {
       .style('font-weight', 'normal')
       .style('margin-top', '3px')
       .style('margin-bottom', '3px')
-      .style('color', '#000000');
+      .style('color', '#000000')
+      .style('text-align', 'left');
     Utils.set([
       descriptionDOM,
       exampleDOM,
@@ -58,13 +59,16 @@ class Tooltip {
     ]).style('font-size', '12px')
       .style('margin-top', '3px')
       .style('margin-bottom', '3px')
-      .style('color', '#000000');
+      .style('color', '#000000')
+      .style('text-align', 'left');
     Utils.set([exampleDOM, exampleMeaningDOM])
       .style('font-style', 'italic')
-      .style('color', '#777777');
+      .style('color', '#777777')
+      .style('text-align', 'left');
     Utils.set([seperatorDOM])
       .style('margin-top', '10px')
-      .style('margin-bottom', '10px');
+      .style('margin-bottom', '10px')
+      .style('text-align', 'left');
 
     Utils.appendHTML(this.dom, titleDOM, `${content.title} ${content.pronounce}`);
     Utils.appendHTML(this.dom, descriptionDOM, `${content.part} ${content.description}`);
