@@ -12,4 +12,4 @@ Firefox Add-ons: https://addons.mozilla.org/firefox/addon/multilingual-fox/
 
 ## License
 
-This project is distributed under the Mozilla Public License Version 2.0 - see the [LICENSE.md](LICENSE.md) file for details. All rights of the dictionary contents are reserved by NAVER Corp. and their partners.
+This project is distributed under the Mozilla Public License Version 2.0 - see the [LICENSE](LICENSE) file for details. All rights of the dictionary contents are reserved by NAVER Corp. and their partners.
