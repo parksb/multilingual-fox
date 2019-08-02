@@ -10,20 +10,19 @@ class Tooltip {
 
     Utils.set([this.dom])
       .style('position', 'fixed')
+      .style('display', 'block')
       .style('top', '5px')
       .style('right', '5px')
-      .style('display', 'block')
       .style('width', 'auto')
       .style('height', 'auto')
-      .style('line-height', '15px')
+      .style('max-width', '250px')
+      .style('max-height', '120px')
       .style('z-index', '99999')
-      .style('background-color', '#ffffff')
-      .style('border', '1px #000000 solid')
       .style('margin', '0')
       .style('padding', '3px')
       .style('padding-right', '30px')
-      .style('max-width', '250px')
-      .style('max-height', '120px')
+      .style('border', '1px #000000 solid')
+      .style('background-color', '#ffffff')
       .style('overflow-y', 'auto')
       .style('opacity', '0.9');
     document.body.appendChild(this.dom);
@@ -45,13 +44,13 @@ class Tooltip {
     const exampleMeaningDOM = document.createElement('p');
     const seperatorDOM = document.createElement('div');
 
-    Utils.set([titleDOM])
-      .style('font-size', '14px')
-      .style('font-weight', 'normal')
-      .style('margin-top', '3px')
-      .style('margin-bottom', '3px')
-      .style('color', '#000000')
-      .style('text-align', 'left');
+    Utils.set([
+      titleDOM,
+      descriptionDOM,
+      exampleDOM,
+      exampleMeaningDOM,
+      seperatorDOM,
+    ]).style('line-height', '15px');
     Utils.set([
       descriptionDOM,
       exampleDOM,
@@ -61,9 +60,18 @@ class Tooltip {
       .style('margin-bottom', '3px')
       .style('color', '#000000')
       .style('text-align', 'left');
-    Utils.set([exampleDOM, exampleMeaningDOM])
-      .style('font-style', 'italic')
+    Utils.set([
+      exampleDOM,
+      exampleMeaningDOM,
+    ]).style('font-style', 'italic')
       .style('color', '#777777')
+      .style('text-align', 'left');
+    Utils.set([titleDOM])
+      .style('font-size', '14px')
+      .style('font-weight', 'normal')
+      .style('margin-top', '3px')
+      .style('margin-bottom', '3px')
+      .style('color', '#000000')
       .style('text-align', 'left');
     Utils.set([seperatorDOM])
       .style('margin-top', '10px')
