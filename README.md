@@ -4,7 +4,7 @@
 
 ![Preview](https://user-images.githubusercontent.com/6410412/61590282-982c0300-abf1-11e9-9845-04e6bd174230.gif)
 
-A simple dictionary extension supporting English-Korean and Chinese-Korean for firefox browser. To float a tooltip on the page, hold `Alt` key (`Option` key on Mac) and select a word for search.
+A simple dictionary extension supporting English-Korean, Chinese-Korean and Japanese-Korean for Firefox browser. To float a tooltip on the page, hold `Alt` key (`Option` key on Mac) and select a word for search.
 
 ## Installing
 
@@ -12,4 +12,6 @@ Firefox Add-ons: https://addons.mozilla.org/firefox/addon/multilingual-fox/
 
 ## License
 
-This project is distributed under the Mozilla Public License Version 2.0 - see the [LICENSE](LICENSE) file for details. All rights of the dictionary contents are reserved by NAVER Corp. and their partners.
+* This project is distributed under the Mozilla Public License Version 2.0 - see the [LICENSE](LICENSE) file for details.
+* All rights of the dictionary contents are reserved by NAVER Corp. and their partners.
+* The graphic resources from Twemoji licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
