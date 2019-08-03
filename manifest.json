@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Multilingual Fox",
-  "version": "0.2",
+  "version": "0.3",
   "description": "A simple dictionary extension for firefox",
   "icons": {
     "48": "icons/icon-48.png",
