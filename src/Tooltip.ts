@@ -78,8 +78,11 @@ class Tooltip {
       .style('margin-bottom', '10px')
       .style('text-align', 'left');
 
-    Utils.appendHTML(this.dom, titleDOM, `${content.title} ${content.pronounce}`);
-    Utils.appendHTML(this.dom, descriptionDOM, `${content.part} ${content.description}`);
+    const title = `${content.title || ''} ${content.pronounce || ''}`;
+    const description = `${content.part || ''} ${content.description || ''}`;
+
+    Utils.appendHTML(this.dom, titleDOM, `${title}`);
+    Utils.appendHTML(this.dom, descriptionDOM, `${description}`);
     Utils.appendText(this.dom, exampleDOM, content.example.sentence);
     Utils.appendText(this.dom, exampleMeaningDOM, content.example.meaning);
 
