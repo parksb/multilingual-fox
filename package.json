@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./node_modules/web-ext/bin/web-ext run",
     "build": "./node_modules/web-ext/bin/web-ext build --overwrite-dest",
-    "start:parcel": "./node_modules/parcel-bundler/bin/cli.js index.ts --open",
+    "start:parcel": "./node_modules/parcel-bundler/bin/cli.js index.ts",
     "build:parcel": "./node_modules/parcel-bundler/bin/cli.js build index.ts"
   },
   "author": "ParkSB",
