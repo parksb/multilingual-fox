@@ -33,6 +33,9 @@ class EndicNaver extends Scraper {
 
         this.content.title = $(`${baseSelector} > ${selector.title}`).html();
         if (!this.content.title) {
+          if (index === 1) {
+            Tooltip.addNoResultDOM();
+          }
           break;
         }
 

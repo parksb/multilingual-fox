@@ -86,6 +86,22 @@ class Tooltip {
     this.dom.appendChild(seperatorDOM);
   }
 
+  public static addNoResultDOM() {
+    const textDOM = document.createElement('p');
+    const text = '검색결과가 없습니다.';
+
+    Utils.set([textDOM])
+      .style('font-size', '12px')
+      .style('font-weight', 'normal')
+      .style('line-height', '15px')
+      .style('margin-top', '3px')
+      .style('margin-bottom', '3px')
+      .style('color', '#000000')
+      .style('text-align', 'left');
+
+    Utils.appendText(this.dom, textDOM, text);
+  }
+
   public static getIsOpen() {
     return this.isOpen;
   }
