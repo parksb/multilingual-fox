@@ -14,7 +14,8 @@
     "webRequest",
     "*://localhost/*",
     "*://endic.naver.com/*",
-    "*://zh.dict.naver.com/*"
+    "*://zh.dict.naver.com/*",
+    "*://ja.dict.naver.com/*"
   ],
   "content_scripts": [
     {

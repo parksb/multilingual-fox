@@ -1,6 +1,7 @@
 enum Languages {
   English,
   Chinese,
+  Japanese,
   Undefined,
 }
 
