@@ -1,6 +1,6 @@
 {
   "name": "multilingual-fox",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A simple dictionary extension for firefox",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "ParkSB",
   "license": "MPL2.0",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
+    "cheerio": "^1.0.0-rc.10",
     "request": "^2.88.0"
   },
   "devDependencies": {
@@ -22,6 +22,6 @@
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.5.3",
-    "web-ext": "^3.1.1"
+    "web-ext": "^6.7.0"
   }
 }
