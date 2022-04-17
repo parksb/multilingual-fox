@@ -11,7 +11,7 @@
   },
   "permissions": [
     "*://localhost/*",
-    "*://endic.naver.com/*",
+    "https://dict.naver.com/*",
     "*://zh.dict.naver.com/*",
     "*://ja.dict.naver.com/*"
   ],
