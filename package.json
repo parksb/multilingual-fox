@@ -3,6 +3,10 @@
   "version": "0.3.1",
   "description": "A simple dictionary extension for firefox",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=17",
+    "npm": ">=8"
+  },
   "scripts": {
     "start": "./node_modules/web-ext/bin/web-ext run",
     "build": "./node_modules/web-ext/bin/web-ext build --overwrite-dest",
