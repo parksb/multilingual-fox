@@ -16,12 +16,10 @@
   "author": "ParkSB",
   "license": "MPL2.0",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.10",
-    "request": "^2.88.0"
+    "cheerio": "^1.0.0-rc.10"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.12",
-    "@types/request": "^2.48.2",
     "parcel-bundler": "^1.12.3",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
