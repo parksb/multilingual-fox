@@ -10,8 +10,8 @@
   "scripts": {
     "start": "./node_modules/web-ext/bin/web-ext run",
     "build": "./node_modules/web-ext/bin/web-ext build --overwrite-dest",
-    "start:parcel": "./node_modules/parcel-bundler/bin/cli.js index.ts",
-    "build:parcel": "./node_modules/parcel-bundler/bin/cli.js build index.ts"
+    "start:js": "npm run build:js -- --watch",
+    "build:js": "esbuild index.ts --outfile=dist/index.js --bundle --platform=browser --sourcemap --format=iife --target=es2020 --minify"
   },
   "author": "ParkSB",
   "license": "MPL2.0",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.12",
+    "esbuild": "^0.14.36",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.5.3",
