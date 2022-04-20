@@ -2,7 +2,6 @@ import { naverQuery } from './NaverHelper';
 
 import Tooltip from '../Tooltip';
 import Scraper from './Scraper';
-import { Content } from '../models';
 
 class EndicNaver extends Scraper {
   static baseUrl: string = 'https://dict.naver.com/api3/enko/search?query=';
