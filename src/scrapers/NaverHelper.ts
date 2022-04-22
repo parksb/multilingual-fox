@@ -31,7 +31,7 @@ export const naverQuery = async (url: string): Promise<Content[]> => {
         const meaning = mean.exampleTrans ? stripHTMLTags(mean.exampleTrans) : null;
         const example = sentence != null && meaning != null ? { sentence, meaning } : undefined;
 
-        return { title, part, pronounce, description, example };
+        return { title, part, pronounce, description: description || undefined, example };
       });
     });
   });
