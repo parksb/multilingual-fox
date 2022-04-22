@@ -8,8 +8,8 @@ document.addEventListener('mouseup', (e) => {
   }
 
   if (!Tooltip.getIsOpen() && e.altKey)  {
-    const word = document.getSelection().toString().trim();
-    if (word.length > 0 && word.length < 40) {
+    const word = document.getSelection()?.toString().trim();
+    if (word != null && word.length > 0 && word.length < 40) {
       if (Dictionary.load(word) !== Languages.Undefined) {
         Tooltip.show();
       }

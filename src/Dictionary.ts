@@ -36,6 +36,7 @@ class Dictionary {
         break;
       case Languages.Japanese:
         JaDictNaver.load(word);
+        break;
       default:
         break;
     }

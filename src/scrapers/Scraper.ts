@@ -17,6 +17,8 @@ class Scraper {
       results.forEach((content) => {
         Tooltip.addContentDOM(content);
       });
+
+      return null;
     })
     .catch(() => {
       Tooltip.addNoResultDOM();
