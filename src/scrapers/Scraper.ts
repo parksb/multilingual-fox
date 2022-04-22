@@ -1,5 +1,4 @@
 import { naverQuery } from './NaverHelper';
-import { Content } from '../models';
 
 import Tooltip from '../Tooltip';
 
@@ -19,7 +18,7 @@ class Scraper {
         Tooltip.addContentDOM(content);
       });
     })
-    .catch((e) => {
+    .catch(() => {
       Tooltip.addNoResultDOM();
     });
   }
