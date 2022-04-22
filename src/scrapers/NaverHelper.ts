@@ -18,12 +18,12 @@ export const naverQuery = async (url: string): Promise<Content[]> => {
       .join(' / ');
 
     return item.meansCollector.flatMap((item) => {
-      const part = item.partOfSpeech || undefined;
+      const part = item.partOfSpeech ? `(${item.partOfSpeech})` : undefined;
 
       return item.means.map((mean) => {
-        const description = mean.value;
-        const sentence = mean.exampleOri;
-        const meaning = mean.exampleTrans;
+        const description = mean.value ? stripHTMLTags(mean.value) : null;
+        const sentence = mean.exampleOri ? stripHTMLTags(mean.exampleOri) : null;
+        const meaning = mean.exampleTrans ? stripHTMLTags(mean.exampleTrans) : null;
         const example = sentence != null && meaning != null ? { sentence, meaning } : undefined;
 
         return { title, part, pronounce, description, example };
@@ -31,3 +31,7 @@ export const naverQuery = async (url: string): Promise<Content[]> => {
     });
   });
 };
+
+function stripHTMLTags(html: string){
+   return new DOMParser().parseFromString(html, 'text/html').body.textContent || null;
+}
