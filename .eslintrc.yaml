@@ -1,0 +1,16 @@
+extends:
+- airbnb-base
+
+plugins:
+- '@typescript-eslint'
+
+parser: '@typescript-eslint/parser'
+
+env:
+  browser: true
+
+rules:
+  import/no-unresolved: off
+  import/extensions: off
+  import/prefer-default-export: off
+  max-len: [error, 120]
