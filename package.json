@@ -23,11 +23,7 @@
   },
   "author": "ParkSB",
   "license": "MPL2.0",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.10"
-  },
   "devDependencies": {
-    "@types/cheerio": "^0.22.12",
     "esbuild": "^0.14.36",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
