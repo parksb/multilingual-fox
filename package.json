@@ -12,7 +12,8 @@
     "build": "npm run build:js && npm run build:copy-asset && web-ext build",
     "build:copy-asset": "cp -R icons/ manifest.json dist/",
     "start:js": "npm run build:js -- --watch",
-    "build:js": "esbuild index.ts --outfile=dist/index.js --bundle --platform=browser --sourcemap --format=iife --target=es2020 --minify"
+    "build:js": "esbuild index.ts --outfile=dist/index.js --bundle --platform=browser --sourcemap --format=iife --target=es2020 --minify",
+    "lint:type": "tsc"
   },
   "webExt": {
     "sourceDir": "dist/",

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "noEmit": true,
+
+    "strict": true,
+    "isolatedModules": true,
+
+    "allowUnreachableCode": false,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+
+    "skipLibCheck": true,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+
+    "lib": ["dom", "esnext"],
+    "resolveJsonModule": true
+  }
+}
