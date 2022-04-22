@@ -11,9 +11,7 @@
   },
   "permissions": [
     "*://localhost/*",
-    "https://dict.naver.com/*",
-    "*://zh.dict.naver.com/*",
-    "*://ja.dict.naver.com/*"
+    "https://dict.naver.com/*"
   ],
   "content_scripts": [
     {
