@@ -81,10 +81,10 @@ class Tooltip {
     const title = `${content.title || ''} ${content.pronounce || ''}`;
     const description = `${content.part || ''} ${content.description || ''}`;
 
-    Utils.appendHTML(this.dom, titleDOM, `${title}`);
-    Utils.appendHTML(this.dom, descriptionDOM, `${description}`);
-    Utils.appendText(this.dom, exampleDOM, content.example.sentence);
-    Utils.appendText(this.dom, exampleMeaningDOM, content.example.meaning);
+    Utils.appendHTML(this.dom, titleDOM, title);
+    Utils.appendHTML(this.dom, descriptionDOM, description);
+    Utils.appendText(this.dom, exampleDOM, content.example?.sentence);
+    Utils.appendText(this.dom, exampleMeaningDOM, content.example?.meaning);
 
     this.dom.appendChild(seperatorDOM);
   }
