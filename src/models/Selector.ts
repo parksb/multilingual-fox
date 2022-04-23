@@ -1,4 +1,4 @@
-interface Selector {
+export interface Selector {
   title: string;
   pronounce?: string;
   part?: string;
@@ -8,5 +8,3 @@ interface Selector {
     meaning: string;
   };
 }
-
-export { Selector };
