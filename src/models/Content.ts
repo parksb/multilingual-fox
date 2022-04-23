@@ -1,4 +1,4 @@
-interface Content {
+export interface Content {
   title: string;
   part?: string;
   pronounce?: string;
@@ -8,5 +8,3 @@ interface Content {
     meaning: string;
   };
 }
-
-export { Content };
