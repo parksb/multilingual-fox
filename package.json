@@ -1,6 +1,6 @@
 {
   "name": "multilingual-fox",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A simple dictionary extension for firefox",
   "main": "dist/index.js",
   "engines": {
