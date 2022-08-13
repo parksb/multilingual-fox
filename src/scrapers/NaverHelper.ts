@@ -6,7 +6,7 @@ type Response =
   | typeof import('./naver-helper-responses/enko.2.json');
 
 export const naverQuery = async (url: string): Promise<Content[]> => {
-  const data: Response = await fetch(url).then((v) => v.json());
+  const data: Response = await fetch(url, { referrer: url }).then((v) => v.json());
 
   const listMap = data.searchResultMap.searchResultListMap;
 
