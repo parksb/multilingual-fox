@@ -15,7 +15,8 @@ class Utils {
 
   public static appendHTML(parent: HTMLElement, child: HTMLElement, content: string) {
     if (content) {
-      child.appendChild(new DOMParser().parseFromString(content, 'text/html').body);
+      const { body } = new DOMParser().parseFromString(content, 'text/html');
+      child.append(...Array.from(body.childNodes));
       parent.appendChild(child);
     }
   }
