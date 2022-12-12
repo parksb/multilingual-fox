@@ -7,9 +7,10 @@ class Utils {
   }
 
   public static style(key: string, value: string) {
-    this.elements.map((element: HTMLElement) => {
+    this.elements.forEach((element: HTMLElement) => {
       element.style.setProperty(key, value, 'important');
     });
+
     return Utils;
   }
 
@@ -23,6 +24,7 @@ class Utils {
 
   public static appendText(parent: HTMLElement, child: HTMLElement, content: string) {
     if (content) {
+      // eslint-disable-next-line no-param-reassign
       child.innerText = content;
       parent.appendChild(child);
     }
@@ -30,6 +32,7 @@ class Utils {
 
   public static prependText(parent: HTMLElement, child: HTMLElement, content: string) {
     if (content) {
+      // eslint-disable-next-line no-param-reassign
       child.innerText = content;
       parent.prepend(child);
     }

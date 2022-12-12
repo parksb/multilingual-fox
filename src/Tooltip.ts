@@ -3,6 +3,7 @@ import Utils from './Utils';
 
 class Tooltip {
   private static dom: HTMLElement;
+
   private static isOpen: boolean;
 
   public static show() {

@@ -5,4 +5,4 @@ enum Languages {
   Undefined,
 }
 
-export  { Languages };
+export { Languages };

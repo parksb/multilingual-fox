@@ -9,20 +9,20 @@ class Scraper {
     const url = `${this.baseUrl}${encodeURIComponent(word)}`;
 
     naverQuery(url)
-    .then((results) => {
-      if (results.length === 0) {
-        return Promise.reject();
-      }
+      .then((results) => {
+        if (results.length === 0) {
+          return Promise.reject();
+        }
 
-      results.forEach((content) => {
-        Tooltip.addContentDOM(content);
+        results.forEach((content) => {
+          Tooltip.addContentDOM(content);
+        });
+
+        return null;
+      })
+      .catch(() => {
+        Tooltip.addNoResultDOM();
       });
-
-      return null;
-    })
-    .catch(() => {
-      Tooltip.addNoResultDOM();
-    });
   }
 }
 
