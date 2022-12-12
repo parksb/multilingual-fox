@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { padding: 5px 20px; }
+      code { background-color: #ededf0; padding: .2em .4em; font-size: 85%; border-radius: 6px; }
+      div { margin-bottom: 30px; }
+    </style>
+  </head>
+  <body>
+    <h1>Multilingual Fox Options</h1>
+    <form>
+      <div>
+        <h2>Trigger key</h2>
+        <p>Hold the key you set here and select a word to display a dictionary tooltip. If you don't want to use any keys, choose 'Without any keys' option. (Default: 'With <code>Alt</code> key')</p>
+        <input type="radio" id="with-alt" name="trigger-key" value="with-alt">
+        <label for="with-alt">With <code>Alt</code> key (<code>Option</code> key on MacOS)</label>
+        <input type="radio" id="without-any-keys" name="trigger-key" value="without-any-keys">
+        <label for="without-any-keys">Without any keys</label>
+      </div>
+      <div class="button-div">
+        <button type="submit">Save</button>
+      </div>
+    </form>
+    <script src="options.js"></script>
+  </body>
+</html>
+
