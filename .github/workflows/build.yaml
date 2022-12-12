@@ -1,4 +1,4 @@
-name: lint
+name: build
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - '**'
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,10 +21,12 @@ jobs:
           cache: npm
       - name: Install packages
         run: npm ci
-      - name: lint
+      - name: Run build
+        run: npm run build
+      - name: Run lint
         run: npm run lint
-      - name: lint:type
+      - name: Run lint:type
         run: npm run lint:type
-      - name: lint:ext
+      - name: Run lint:ext
         run: npm run lint:ext
 
