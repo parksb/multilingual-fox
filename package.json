@@ -14,7 +14,8 @@
     "start:js": "npm run build:js -- --watch",
     "build:js": "esbuild index.ts --outfile=dist/index.js --bundle --platform=browser --sourcemap --format=iife --target=es2020 --minify",
     "lint": "eslint --ignore-path=.gitignore --ext=ts .",
-    "lint:type": "tsc"
+    "lint:type": "tsc",
+    "lint:ext": "web-ext lint"
   },
   "webExt": {
     "sourceDir": "dist/",
@@ -32,6 +33,6 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "typescript": "^4.6.3",
-    "web-ext": "^6.8.0"
+    "web-ext": "^7.4.0"
   }
 }
