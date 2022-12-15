@@ -23,7 +23,7 @@ document.addEventListener('mouseup', (e) => {
     showTooltip(true);
   };
 
-  const onTriggerKeyGot = (item: { triggerKey: 'with-alt' | 'without-any-key' }) => {
+  const onTriggerKeyGot = (item: any) => {
     showTooltip(item.triggerKey === 'with-alt');
   };
 

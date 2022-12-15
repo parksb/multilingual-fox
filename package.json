@@ -27,6 +27,7 @@
   "author": "ParkSB",
   "license": "MPL2.0",
   "devDependencies": {
+    "@types/firefox-webext-browser": "^94.0.1",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "esbuild": "^0.14.36",
     "eslint": "^8.13.0",
