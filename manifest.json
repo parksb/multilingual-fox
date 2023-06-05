@@ -11,12 +11,21 @@
   },
   "permissions": [
     "*://localhost/*",
-    "https://dict.naver.com/*"
+    "https://dict.naver.com/*",
+    "storage"
   ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["index.js"]
     }
-  ]
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{9cf8492b-d753-465b-9b26-7dbf46ad6040}"
+    }
+  }
 }
