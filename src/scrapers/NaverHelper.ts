@@ -14,7 +14,10 @@ export const naverQuery = async (url: string): Promise<Content[]> => {
 
   const listMap = data.searchResultMap.searchResultListMap;
 
-  return listMap.WORD.items.flatMap((word) => {
+  const contents: Content[] = [];
+  const contentsWithoutDescription: Content[] = [];
+
+  listMap.WORD.items.forEach((word) => {
     const title = word.expEntry;
 
     const pronounce = word.searchPhoneticSymbolList
@@ -26,23 +29,31 @@ export const naverQuery = async (url: string): Promise<Content[]> => {
       .filter((v): v is Exclude<typeof v, null> => v != null)
       .join(' / ');
 
-    return word.meansCollector.flatMap((collected) => {
+    word.meansCollector.forEach((collected) => {
       const part = collected.partOfSpeech ? `(${collected.partOfSpeech})` : undefined;
 
-      return collected.means.map((mean) => {
+      collected.means.forEach((mean) => {
         const description = mean.value ? stripHTMLTags(mean.value) : null;
         const sentence = mean.exampleOri ? stripHTMLTags(mean.exampleOri) : null;
         const meaning = mean.exampleTrans ? stripHTMLTags(mean.exampleTrans) : null;
         const example = sentence != null && meaning != null ? { sentence, meaning } : undefined;
 
-        return {
+        const content = {
           title,
           part,
           pronounce,
           description: description || undefined,
           example,
         };
+
+        if (description == null) {
+          contentsWithoutDescription.push(content);
+        } else {
+          contents.push(content);
+        }
       });
     });
   });
+
+  return contents.concat(contentsWithoutDescription);
 };
