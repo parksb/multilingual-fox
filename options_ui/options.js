@@ -7,7 +7,7 @@ function saveOptions(e) {
 
 function restoreOptions() {
   function setCurrentChoice(result) {
-    document.querySelector(`#${result.triggerKey}`).checked = true;
+    document.querySelector(`#${result.triggerKey ?? 'with-alt'}`).checked = true;
   }
 
   function onError(error) {

@@ -5,23 +5,31 @@
     <style>
       body { padding: 5px 20px; }
       code { background-color: #ededf0; padding: .2em .4em; font-size: 85%; border-radius: 6px; }
-      div { margin-bottom: 30px; }
+      section { margin-bottom: 30px; }
     </style>
   </head>
   <body>
     <h1>Multilingual Fox Options</h1>
     <form>
-      <div>
+      <section>
         <h2>Trigger key</h2>
-        <p>Hold the key you set here and select a word to display a dictionary tooltip. If you don't want to use any keys, choose 'Without any keys' option. (Default: 'With <code>Alt</code> key')</p>
-        <input type="radio" id="with-alt" name="trigger-key" value="with-alt">
-        <label for="with-alt">With <code>Alt</code> key (<code>Option</code> key on MacOS)</label>
-        <input type="radio" id="without-any-keys" name="trigger-key" value="without-any-keys">
-        <label for="without-any-keys">Without any keys</label>
-      </div>
-      <div class="button-div">
+        <p>Hold the key you set here and select a word to display a dictionary tooltip. (Default: 'With <code>Alt</code> key')</p>
+        <div>
+          <input type="radio" id="with-alt" name="trigger-key" value="with-alt">
+          <label for="with-alt">With <code>Alt</code> key (<code>Option</code> key on MacOS)</label>
+        </div>
+        <div>
+          <input type="radio" id="with-ctrl" name="trigger-key" value="with-ctrl">
+          <label for="with-ctrl">With <code>Ctrl</code> key (<code>Control</code> key on MacOS)</label>
+        </div>
+        <div>
+          <input type="radio" id="with-super" name="trigger-key" value="with-super">
+          <label for="with-super">With <code>Super</code> key (<code>Windows</code> key on Windows, and <code>Command</code> key on MacOS)</label>
+        </div>
+      </section>
+      <section class="button-div">
         <button type="submit">Save</button>
-      </div>
+      </section>
     </form>
     <script src="options.js"></script>
   </body>
