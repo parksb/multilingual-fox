@@ -20,7 +20,7 @@ document.addEventListener('mouseup', (e: MouseEvent) => {
   };
 
   const onError = () => {
-    showTooltip(TriggerKey.Unkown);
+    showTooltip(TriggerKey.Unknown);
   };
 
   const onTriggerKeyGot = (item: any) => {

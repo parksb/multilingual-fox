@@ -2,7 +2,7 @@ export enum TriggerKey {
   Alt = 'with-alt',
   Ctrl = 'with-ctrl',
   Super = 'with-super',
-  Unkown = 'unkown',
+  Unknown = 'unknown',
 }
 
 export const toTriggerKey = (key: string): TriggerKey => {
