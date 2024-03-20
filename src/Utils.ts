@@ -14,6 +14,14 @@ class Utils {
     return Utils;
   }
 
+  public static styleNonImportant(key: string, value: string) {
+    this.elements.forEach((element: HTMLElement) => {
+      element.style.setProperty(key, value);
+    });
+
+    return Utils;
+  }
+
   public static appendHTML(parent: HTMLElement, child: HTMLElement, content: string) {
     if (content) {
       const { body } = new DOMParser().parseFromString(content, 'text/html');

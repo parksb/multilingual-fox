@@ -10,6 +10,7 @@ class Tooltip {
     this.dom = document.createElement('div');
 
     Utils.set([this.dom])
+      .styleNonImportant('all', 'initial')
       .style('position', 'fixed')
       .style('display', 'block')
       .style('top', '5px')
