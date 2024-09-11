@@ -19,7 +19,7 @@ class Tooltip {
       .style('height', 'auto')
       .style('max-width', '250px')
       .style('max-height', '120px')
-      .style('z-index', '99999')
+      .style('z-index', '2147483647')
       .style('margin', '0')
       .style('padding', '3px')
       .style('padding-right', '30px')
