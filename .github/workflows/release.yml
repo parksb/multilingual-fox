@@ -1,0 +1,28 @@
+name: release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install packages
+        run: npm install
+      - name: Run build
+        run: npm run build
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "web-ext-artifacts/multilingual_fox-*.zip"
