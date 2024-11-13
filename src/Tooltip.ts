@@ -87,8 +87,8 @@ class Tooltip {
     Utils.appendHTML(this.dom, descriptionDOM, description);
 
     if (content.example != null) {
-      Utils.appendText(this.dom, exampleDOM, content.example.sentence);
-      Utils.appendText(this.dom, exampleMeaningDOM, content.example.meaning);
+      Utils.appendHTML(this.dom, exampleDOM, content.example.sentence);
+      Utils.appendHTML(this.dom, exampleMeaningDOM, content.example.meaning);
     }
 
     this.dom.appendChild(seperatorDOM);
